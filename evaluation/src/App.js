@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Books } from "./components/books";
+import { Inkpens } from "./components/inkpen";
+import { Pens } from "./components/pens";
+import { Notebooks } from "./components/notebook";
+import { Total } from "./components/total";
 function App() {
+  let books = 13;
+  let pens = 10;
+  let notebooks = 44;
+  let inkpens = 78;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Books value={books} />
+      <Pens value={pens} />
+      <Notebooks value={notebooks} />
+      <Inkpens value={inkpens} />
+      <Total />
+    </>
   );
 }
 
